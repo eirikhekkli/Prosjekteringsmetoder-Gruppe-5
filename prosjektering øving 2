@@ -1,0 +1,42 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+
+
+
+#ØVING 2
+
+#definerer konstanter
+Tw = 12 #[h]
+Wll = 1000 #[m**2/hr]
+Q = 1 * 10**6 #[tonn/år]
+gamma = 0.9
+d = 1987 #[nautiske mil]
+
+
+OH = 14 #må sjekkes
+
+v = np.arange(8,18.5,0.5) #[knop]
+
+Ts = d/(v)
+q = (Q * (Tw+Ts)) / (gamma * (365 * 24 - OH - (2 * Q)/ (Wll)))
+    
+
+plt.figure(figsize = (10,6))
+plt.plot(v, q, color = "hotpink")
+plt.xlabel("Fart v [knop]")
+plt.ylabel("q per rundtur [tonn]")
+plt.title("Lastmengde som funksjon av fart")
+plt.grid(True)
+plt.show()
+
+
+alpha = 0.5
+beta = 3.5
+k = 0.00565 #median av 7 skip med ulik hastighet 
+
+KW = k * q**alpha * v**beta
+
+print("KW er:",KW)

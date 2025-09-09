@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HavShipping AS – Flåte</title>
+  <meta name="description" content="Oppdatert flåteoversikt med tall i henhold til beregninger." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap header-inner">
+      <div>
+        <h1>HavShipping AS</h1>
+        <p class="tagline">Vår flåte og miljøytelse</p>
+      </div>
+      <div class="controls">
+        <button class="btn" id="themeToggle" aria-pressed="false" aria-label="Bytt tema">🌓 Tema</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap nav nav-inner" role="navigation" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="fleet.html" aria-current="page">Flåte</a>
+      <a href="strategy.html">Miljøstrategi 2050</a>
+      <a href="documentation.html">Dokumentasjon</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- Flåteoversikt -->
+      <section class="card" aria-labelledby="fleet-title">
+        <div class="card-header">
+          <h2 id="fleet-title">Flåteoversikt</h2>
+          <span class="help">Tall oppdatert i henhold til vedlagte beregninger.</span>
+        </div>
+        <div class="card-body">
+          <div class="table-wrap">
+            <table>
+              <caption>Skipstyper, årlige CO₂-utslipp og CII</caption>
+              <thead>
+                <tr>
+                  <th>Skip</th>
+                  <th>Type</th>
+                  <th class="num">CO₂ (tonn/år)</th>
+                  <th class="num">CII</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MS Aurora</td>
+                  <td>--</td>
+                  <td class="num">29 782,3</td>
+                  <td class="num">45,5</td>
+                </tr>
+                <tr>
+                  <td>MS Borealis</td>
+                  <td>--</td>
+                  <td class="num">31 653,8</td>
+                  <td class="num">43,8</td>
+                </tr>
+                <tr>
+                  <td>MS Polaris</td>
+                  <td>--</td>
+                  <td class="num">27 644,8</td>
+                  <td class="num">46,8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beskrivelser -->
+     
+
+      <!-- Detaljer per skip -->
+      <section class="card" aria-labelledby="details-title">
+        <div class="card-header">
+          <h2 id="details-title">Detaljert informasjon per skip</h2>
+          <a class="btn" href="documentation.html">Se full dokumentasjon</a>
+        </div>
+        <div class="card-body">
+
+          <h3>Skip 1 – MS Aurora</h3>
+          <p><strong>Rute:</strong> NOAES – GBABD – NLRTM – SEGOT – SEGVX – NOKRS – NOAES</p>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>Total seilingsdistanse</th><td class="num">3 116 <span class="unit">nm</span></td></tr>
+                <tr><th>Power</th><td class="num">7 500 <span class="unit">kW</span></td></tr>
+                <tr><th>Hastighet</th><td class="num">13,0 <span class="unit">knop</span></td></tr>
+                <tr><th>Årlig drivstofforbruk</th><td class="num">9 564 <span class="unit">tonn HFO</span></td></tr>
+                <tr><th>Årlige CO₂-utslipp</th><td class="num">29 782,3 <span class="unit">tonn</span></td></tr>
+                <tr><th>CII</th><td class="num">45,5</td></tr>
+                <tr><th>CO₂ / nm</th><td class="num">0,341 <span class="unit">tonn/nm</span></td></tr>
+                <tr><th>CO₂eq / nm</th><td class="num">0,344 <span class="unit">tonn/nm</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Skip 2 – MS Borealis</h3>
+          <p><strong>Rute:</strong> FIKTK – SEGVX – DKAAR – BEANR – GBABD – NOAES – NOKRS – FIKTK</p>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>Total seilingsdistanse</th><td class="num">3 768 <span class="unit">nm</span></td></tr>
+                <tr><th>Power</th><td class="num">8 000 <span class="unit">kW</span></td></tr>
+                <tr><th>Hastighet</th><td class="num">13,5 <span class="unit">knop</span></td></tr>
+                <tr><th>Årlig drivstofforbruk</th><td class="num">10 165 <span class="unit">tonn HFO</span></td></tr>
+                <tr><th>Årlige CO₂-utslipp</th><td class="num">31 653,8 <span class="unit">tonn</span></td></tr>
+                <tr><th>CII</th><td class="num">43,8</td></tr>
+                <tr><th>CO₂ / nm</th><td class="num">0,350 <span class="unit">tonn/nm</span></td></tr>
+                <tr><th>CO₂eq / nm</th><td class="num">0,354 <span class="unit">tonn/nm</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Skip 3 – MS Polaris</h3>
+          <p><strong>Rute:</strong> NOKRS – SEGOT – DKAAR – FIKTK – NLRTM – GBABD – BEANR – NOAES – NOKRS</p>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>Total seilingsdistanse</th><td class="num">4 221 <span class="unit">nm</span></td></tr>
+                <tr><th>Power</th><td class="num">7 200 <span class="unit">kW</span></td></tr>
+                <tr><th>Hastighet</th><td class="num">13,0 <span class="unit">knop</span></td></tr>
+                <tr><th>Årlig drivstofforbruk</th><td class="num">8 894 <span class="unit">tonn HFO</span></td></tr>
+                <tr><th>Årlige CO₂-utslipp</th><td class="num">27 644,8 <span class="unit">tonn</span></td></tr>
+                <tr><th>CII</th><td class="num">46,8</td></tr>
+                <tr><th>CO₂ / nm</th><td class="num">0,328 <span class="unit">tonn/nm</span></td></tr>
+                <tr><th>CO₂eq / nm</th><td class="num">0,331 <span class="unit">tonn/nm</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2025 HavShipping AS</p>
+    </div>
+  </footer>
+
+  <script>
+    // Enkel temavelger (samme som øvrige sider)
+    (function(){
+      const KEY='havshipping-theme';
+      const el=document.documentElement;
+      const stored=localStorage.getItem(KEY);
+      if(stored){ el.setAttribute('data-theme', stored); }
+      const btn=document.getElementById('themeToggle');
+      function setTheme(next){
+        if(next==='light'){ el.setAttribute('data-theme','light'); } else { el.removeAttribute('data-theme'); }
+        localStorage.setItem(KEY,next);
+        btn.setAttribute('aria-pressed', next==='light');
+      }
+      btn?.addEventListener('click', ()=>{
+        const active=el.getAttribute('data-theme')==='light'?'dark':'light';
+        setTheme(active);
+      });
+    })();
+  </script>
+</body>
+</html>

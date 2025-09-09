@@ -1,0 +1,58 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+#ØVING 2 med v = 14 knop
+
+#definerer konstanter
+Tw = 12 #[h]
+Wll = 1000 #[m**2/hr]
+Q = 1 * 10**6 #[tonn/år]
+gamma = 0.9
+d = 1987 #[nautiske mil]
+ports = 6
+
+
+OH = 14 #estimert tall
+
+v = 12
+Ts = d/v
+q = (Q * (Tw+Ts)) / (gamma * (365 * 24 - OH - (2 * Q)/ (Wll)))
+
+Tp = (2 * q * gamma) / Wll
+
+
+#antall turer i løpet av ett år
+n = gamma*(365 * 24 - OH * 24) / (Tw + Ts + Tp)
+
+print("rundturer per år:",n)
+
+
+P = 4500  #estimert tall 
+SFC = 0.19 #HFO
+
+
+#Drivstoff
+årlig_drivstoff = (P * SFC * (d / v) * n) / (1000)
+
+print ("årlig drivstoffforbruk:", årlig_drivstoff, "tonn per år")
+
+#CO2
+CO2_faktor = 3.114
+CO2 = årlig_drivstoff * CO2_faktor
+
+print("CO2 utlsipp er:", CO2, "tonn/år")
+
+
+#CII
+CII = CO2 * 10 **6 / (P * d * n)
+print("Carbon Intensity Index er:", CII)
+
+#CO2 per nm
+CO2_nm = CO2/ (d * n)
+print("CO2 per nautiske mil er:",CO2_nm)
+
+#CO2 ekvivalent
+HFO_faktor = 1.01
+CO2_eq = CO2_nm * HFO_faktor
+print("CO2 ekvivalent per nautiske mil er:",CO2_eq)
